@@ -1,0 +1,10 @@
+body {
+    background-image: url("assets/bg.png");
+}
+
+#pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
+}
