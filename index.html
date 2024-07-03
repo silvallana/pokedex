@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokedex</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <img src="assets/logo.png" class="logo" alt="logo"/>
-        <div class="pokemon-container"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="assets/logo.png" class="logo" alt="logo" />
+    <div class="search-wrapper">
+        <div class="search-wrap">
+            <input type="text" class="search-input" id="search-input" placeholder="Search Pokemons"/>
+        </div>
+        <div class="filter-wrapper">
+            <p class="filter-fonts">Sort by:</p>
+            <div class="filter-wrap">
+                <div>
+                    <input type="radio" id="number" name="filters" value="number" checked />
+                    <label for="number" class="filter-fonts">Number</label>
+                </div>
+                <div>
+                    <input type="radio" id="name" name="filters" value="name" autocomplete="off" />
+                    <label for="name" class="filter-fonts">Name</label>
+                </div>
+            </div>
+            <div id="not-found-message">Pokemon not found</div>
+            <div class="pokemon-container"></div>
             <ul id="pokemon-list"></ul>
-        <button onclick="fetchPokemons()">Load More Pokemons</button>
-        <script src="script.js"></script>
-    </body>
+            <button onclick="fetchPokemons()">Load More Pokemons</button>
+            <script src="script.js"></script>
+        </div>
+</body>
+
 </html>
